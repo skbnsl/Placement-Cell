@@ -1,6 +1,6 @@
 //require express
 const express = require('express');
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 //import database
 const db = require('./config/mongoose');
