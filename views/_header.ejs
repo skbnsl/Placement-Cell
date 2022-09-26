@@ -1,0 +1,14 @@
+<header>
+          <li><a href="../">Home</a></li>
+          <li><a href="../student/placement">Placement Cell</a></li>
+
+        <div>
+          <% if (!isAuthenticate){ %>
+            <a  href="../user/sign-in">Login</a>
+            <a  href="../user/sign-up">Sign-up</a>
+          <% } else { %> 
+            <span> <%= email %> </span>
+            <a  href="../user/sign-out">sign Out</a>
+          <% } %>
+        </div>
+  </header>

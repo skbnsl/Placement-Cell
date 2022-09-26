@@ -1,0 +1,51 @@
+<br>
+<br>
+<div>
+          <h4>Interview List</h4>
+          <a href="../student/download">Download Data</a>
+         <table style="border: 1px solid black;">
+          <thead style="border:1px solid black;">
+                    <tr>
+                              <th>ComapnyName</th>
+                              <th>StudentName</th>
+                              <th>Status</th>
+                              <th>Date</th>
+                    </tr>
+          </thead>
+          
+          <tbody>
+                    <% for(interview of interviews){ %> 
+                       <tr>
+                              <td><%= interview.companyName %></td>
+                              <td><%= interview.studentName %> </td>
+                              <td><%= interview.result %> </td>
+                              <td><%= interview.date %> </td>
+                       </tr>          
+                    <%}%>
+          </tbody>
+   </table>
+</div>
+<br>
+<br>
+<br>
+<h3>Add New Interview</h3>
+<form action="../student/add-interview" method="post">
+          <input name="companyName" placeholder="Company Name" required>
+          <select name="studentName" placeholder="Student Name" required>
+                    <% for(student of students){ %> 
+                         <option value="<%= student.name %>">
+                              <%= student.name %>
+                         </option>          
+                    <%}%>
+          </select>
+          <select name="result"  placeholder="result" required>
+                    <option value="pass">pass</option>
+                    <option value="failed">failed</option>
+                    <option value="Not attempt">Not attempt</option>
+                    <option value="On Hold">On Hold</option>
+                    <option value="round1">round1</option>
+                    <option value="round2">round2</option>
+          </select>
+          <input type="date" name="date" required>
+       <button type="submit">Add New Interview</button>   
+</form>

@@ -1,0 +1,50 @@
+<br>
+<br>
+<br>
+<h3>Student Data</h3>
+<table style="border: 1px solid black;">
+          <tr style="border: 1px solid black;">
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>College</th>
+                    <th>Result</th>
+                    <th>Batch</th>
+                    <th>DSA</th>
+                    <th>WebD</th>
+                    <th>React</th>
+          </tr>
+          <tbody >
+                    <% for(x of students){ %> 
+                     <tr style="border: 1px solid black;">
+                             <td><%= x.name %></td>
+                             <td><%= x.email %></td>
+                             <td><%= x.college %></td>
+                             <td><%= x.placementStatus %></td>
+                             <td><%= x.batch %></td>
+                             <td><%= x.dsa %></td>
+                             <td><%= x.webD %></td>
+                             <td><%= x.react %></td>
+                    </tr>
+                    <%}%>
+          </tbody>
+</table>
+<br>
+<br>
+<br>
+<div>
+          <h3>New Student Form</h3>
+          <form action="../student/add" method="post">
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                    <input type="text" name="college" placeholder="College Name" required>
+                    <input type="text" name="batch" placeholder="Batch Name" required>
+                    <br>
+                    <input type="text" name="placementStatus" placeholder="placed/Not-Placed" required>
+                    <input type="number" name="dsa" placeholder="DSA Score" required>
+                    <input type="number" name="webD" placeholder="Web-development Score" required>
+                    <input type="number" name="react" placeholder="React Score" required>
+                    <br>
+                    <button type="submit">Add New Student</button>
+          </form>
+</div>
