@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 
 //connct to database
-mongoose.connect('mongodb://localhost/placement_cell');
+mongoose.connect('mongodb+srv://skbnsl:<password>@cluster0.prpxtu0.mongodb.net/?retryWrites=true&w=majorityss');
 
 
-const db = mongoose.connection;
+const db = mongoose.connection; 
 
 //checking connection with database
 db.on('error', console.error.bind(console,'error in connecting to database'));
