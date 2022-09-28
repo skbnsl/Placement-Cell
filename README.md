@@ -5,3 +5,6 @@ created a placement-Cell where it has the data of student Data and their intervi
 interview .
 we can download the data of interviews.
 and we have done this MVC model
+
+
+deploy link:   https://placementell.herokuapp.com/user/sign-in
